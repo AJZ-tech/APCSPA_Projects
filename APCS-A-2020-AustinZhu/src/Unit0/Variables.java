@@ -44,23 +44,23 @@ public class Variables
 		System.out.println("*        integer types          *");
 		System.out.println("*                               *");
 		System.out.println("*8 bit - byteOne = "+byteOne+"\t\t*");
-		System.out.println("*32 bit - intOne = "+intOne+"\t\t*");
+		System.out.println("*32 bit - intOne = "+intOne+"\t*");
 		System.out.println("*                               *");
 		System.out.println("*        decimal types          *");
 		System.out.println("*                               *");
-		System.out.println("*32 bit - intOne = "+intOne+"\t\t*");
-		System.out.println("*32 bit - intOne = "+intOne+"\t\t*");
+		System.out.println("*32 bit - floatOne = "+floatOne+"\t*");
+		System.out.println("*64 bit - doubleOne = "+doubleOne+"\t*");
 		System.out.println("*                               *");
 		System.out.println("*     other integer types       *");
 		System.out.println("*                               *");
-		System.out.println("*32 bit - intOne = "+intOne+"\t\t*");
-		System.out.println("*32 bit - intOne = "+intOne+"\t\t*");
+		System.out.println("*16 bit - shortOne = "+shortOne+"\t*");
+		System.out.println("*64 bit - longOne = "+longOne+"\t*");
 		System.out.println("*                               *");
 		System.out.println("*         other types           *");
 		System.out.println("*                               *");
-		System.out.println("*32 bit - intOne = "+intOne+"\t\t*");
-		System.out.println("*32 bit - intOne = "+intOne+"\t\t*");
-		System.out.println("*32 bit - intOne = "+intOne+"\t\t*");
+		System.out.println("*16 bit - charOne = "+charOne+"\t\t*");
+		System.out.println("*1 bit - booleanOne = "+booleanOne+"\t*");
+		System.out.println("*??? bit - StringOne = "+StringOne+"\t*");
 		System.out.println("/////////////////////////////////");
 
 
