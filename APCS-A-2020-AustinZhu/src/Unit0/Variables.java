@@ -40,6 +40,7 @@ public class Variables
 
 		//output your information here
 		System.out.println("/////////////////////////////////");
+		System.out.println("*Austin Zhu              1/31/20*");
 		System.out.println("*                               *");
 		System.out.println("*        integer types          *");
 		System.out.println("*                               *");
