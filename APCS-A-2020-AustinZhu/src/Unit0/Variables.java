@@ -23,7 +23,7 @@ public class Variables
 
 
 		//decimal variables
-		float floatOne = (float) 0.0000001;
+		float floatOne = 0.0000001f;
 		double doubleOne = 0.000000000000001;
 
 
