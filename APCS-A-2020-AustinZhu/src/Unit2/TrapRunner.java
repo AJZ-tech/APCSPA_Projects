@@ -1,9 +1,9 @@
 package Unit2;
 //� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  - 
+//Name - Austin Zhu
+//Date - 2/3/2020
+//Class - Period 2
+//Lab  - Trap Runner
 
 public class TrapRunner
 {
