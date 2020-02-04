@@ -23,7 +23,7 @@ public class DistanceRunner
 			int X1 = keyboard.nextInt();
 		
 			out.print("Enter Y1 :: ");
-			int Y1 = keyboard.nextInt();
+			int Y1 = keyboard.nextInt(); 
 		
 			out.print("Enter X2 :: ");
 			int X2 = keyboard.nextInt();

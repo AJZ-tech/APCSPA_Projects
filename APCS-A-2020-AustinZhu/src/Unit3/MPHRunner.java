@@ -22,7 +22,7 @@ public class MPHRunner
 			int dist = keyboard.nextInt();
 
 			out.print("Enter the hours :: ");
-			int hrs = keyboard.nextInt();
+			int hrs = keyboard.nextInt(); 
 
 			out.print("Enter the minutes :: ");
 			int mins = keyboard.nextInt();

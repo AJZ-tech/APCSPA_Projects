@@ -1,10 +1,10 @@
 package Unit2;
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name - Austin Zhu
+//Name - Austin Zhu 
 //Date - 2/3/2020
 
-public class CubeRunner
+public class CubeRunner 
 {
 	public static void main( String[] args )
    {

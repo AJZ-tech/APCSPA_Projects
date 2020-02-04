@@ -7,7 +7,7 @@ package Unit0;
 //Class - 2
 //Lab  - 1
 
-public class AsciiBox
+public class AsciiBox 
 {
 	public static void main(String[] args)
 	{

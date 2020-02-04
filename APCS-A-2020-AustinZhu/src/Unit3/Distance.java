@@ -20,7 +20,7 @@ public class Distance
 	{
 		setCoordinates(0,0,0,0);
 		distance = 0.0;
-	}
+	} 
 
 	public Distance(int x1, int y1, int x2, int y2)
 	{
