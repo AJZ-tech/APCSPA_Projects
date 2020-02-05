@@ -2,10 +2,10 @@ package Unit0;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Austin Zhu
+//Date - 2/1/2020
+//Class - Period 2
+//Lab  - AsciiArt
 
 public class AsciiArt
 {
