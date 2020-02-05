@@ -15,10 +15,17 @@ public class DistanceRunner
 {
 	public static void main( String[] args )
 	{
-		while(1==1) {
-			//add test cases	
-			Scanner keyboard = new Scanner(in);
+		Scanner keyboard = new Scanner(in);
+		Distance example = new Distance();
 		
+		example.setCoordinates(1, 1, 2, 1);
+		out.print("Example:\n\nEnter X1 :: 1\nEnter Y1 :: 1\nEnter X2 :: 2\nEnter Y2 :: 1\n");
+		example.calcDistance();
+		example.print();
+		out.println("\n");
+		
+		while(1==1) {
+			//add test cases			
 			int X1 = 0;
 			while (1==1) {
 				out.print("Enter X1 :: ");
@@ -71,7 +78,7 @@ public class DistanceRunner
 			test.calcDistance();
 			test.print();
 			
-			out.print("\n\n");
+			out.print("\n");
 			
 			boolean quit = false;
 			while (1==1) {
@@ -85,7 +92,7 @@ public class DistanceRunner
 					out.print("\n");
 					break;
 				} else {
-					out.print("invalid answer.\n\n");
+					out.print("invalid input!\n");
 				}
 			}
 			if (quit == true) {

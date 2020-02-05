@@ -16,6 +16,14 @@ public class MPHRunner
 	public static void main( String[] args )
 	{
 		Scanner keyboard = new Scanner(in);
+		MilesPerHour example = new MilesPerHour();
+		
+		example.setNums(45, 0, 32);
+		out.print("Example:\n\nEnter the distance :: 45\nEnter the distance :: 0\nEnter the distance :: 32\n");
+		example.calcMPH();
+		example.print();
+		out.println("\n");
+		
 		
 		int dist = 0;
 		while (1==1) {
@@ -58,7 +66,7 @@ public class MPHRunner
 			test.calcMPH();
 			test.print();
 			
-			out.print("\n\n");
+			out.print("\n");
 			
 			boolean quit = false;
 			while (1==1) {
@@ -72,7 +80,7 @@ public class MPHRunner
 					out.print("\n");
 					break;
 				} else {
-					out.print("invalid answer.\n\n");
+					out.print("invalid input!\n\n");
 				}
 			}
 			if (quit == true) {
