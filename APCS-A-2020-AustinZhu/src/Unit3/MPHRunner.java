@@ -17,15 +17,42 @@ public class MPHRunner
 	{
 		Scanner keyboard = new Scanner(in);
 		
+		int dist = 0;
 		while (1==1) {
-			out.print("Enter the distance :: ");
-			int dist = keyboard.nextInt();
-
-			out.print("Enter the hours :: ");
-			int hrs = keyboard.nextInt(); 
-
-			out.print("Enter the minutes :: ");
-			int mins = keyboard.nextInt();
+			while (1==1) {
+				out.print("Enter the distance :: ");
+				if (keyboard.hasNextInt()) {
+					dist = keyboard.nextInt();
+					break;
+				} else {
+					out.println("\ninvalid input!");
+		            keyboard.next();
+				}
+			}
+			
+			int hrs = 0;
+			while (1==1) {
+				out.print("Enter the hours :: ");
+				if (keyboard.hasNextInt()) {
+					hrs = keyboard.nextInt(); 
+					break;
+				} else {
+					out.println("\ninvalid input!");
+		            keyboard.next();
+				}
+			}
+			
+			int mins = 0;
+			while (1==1) {
+				out.print("Enter the minutes :: ");
+				if(keyboard.hasNextInt()) {
+					mins = keyboard.nextInt();
+					break;
+				} else {
+					out.println("\ninvalid input!");
+		            keyboard.next();
+				}
+			}
 
 			MilesPerHour test = new MilesPerHour(dist, hrs, mins);
 			test.calcMPH();

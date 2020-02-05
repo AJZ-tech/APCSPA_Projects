@@ -19,17 +19,53 @@ public class DistanceRunner
 			//add test cases	
 			Scanner keyboard = new Scanner(in);
 		
-			out.print("Enter X1 :: ");
-			int X1 = keyboard.nextInt();
+			int X1 = 0;
+			while (1==1) {
+				out.print("Enter X1 :: ");
+				if (keyboard.hasNextInt()) {
+					X1 = keyboard.nextInt();
+					break;
+				} else {
+					out.println("\ninvalid input!");
+		            keyboard.next();
+				}
+			}
+			
+			int Y1 = 0;
+			while (1==1) {
+				out.print("Enter Y1 :: ");
+				if (keyboard.hasNextInt()) {
+					Y1 = keyboard.nextInt(); 
+					break;
+				} else {
+					out.println("\ninvalid input!");
+		            keyboard.next();
+				}
+			}
 		
-			out.print("Enter Y1 :: ");
-			int Y1 = keyboard.nextInt(); 
+			int X2 = 0;
+			while (1==1) {
+				out.print("Enter X2 :: ");
+				if (keyboard.hasNextInt()) {
+					X2 = keyboard.nextInt();
+					break;
+				} else {
+					out.println("\ninvalid input!");
+		            keyboard.next();
+				}
+			}
 		
-			out.print("Enter X2 :: ");
-			int X2 = keyboard.nextInt();
-		
-			out.print("Enter Y2 :: ");
-			int Y2 = keyboard.nextInt();
+			int Y2 = 0;
+			while (1==1) {
+				out.print("Enter Y2 :: ");
+				if (keyboard.hasNextInt()) {
+					Y2 = keyboard.nextInt();
+					break;
+				} else {
+					out.println("\ninvalid input!");
+		            keyboard.next();
+				}
+			}
 		
 			Distance test = new Distance(X1,Y1,X2,Y2);
 			test.calcDistance();
