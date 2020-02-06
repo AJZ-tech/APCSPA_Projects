@@ -42,7 +42,9 @@ public class MilesPerHour
 
 	public void print()
 	{
-		System.out.println(distance +" miles in "+ hours +" hours and "+ minutes +" minutes is "+ (int)Math.round(mph) +" miles per hour");
+		System.out.println(distance +" {0} miles in "+ hours +" hours and "+ minutes +" minutes is "+ (int)Math.round(mph) +" miles per hour");
+		//System.out.println(String.format("test: %s, test: %f, test: %.3f","bob", 21321515324.54364645543, 21321515324.54364645543));
+		//System.out.println( String.format("%.02f", 435.23432532) );
 	}
 	
 	//create a print or toString or both
