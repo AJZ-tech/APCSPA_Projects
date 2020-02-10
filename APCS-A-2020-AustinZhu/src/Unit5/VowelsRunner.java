@@ -4,8 +4,7 @@ package Unit5;
 //Name -
 //Date -
 
-public class JavaStringLabRunner
-{
+public class VowelsRunner {
 	public static void main( String args[] )
 	{
 		FirstLastVowel s = new FirstLastVowel();
