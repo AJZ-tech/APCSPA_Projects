@@ -19,15 +19,25 @@ public class LetterRemoverRunner
 			out.print("Enter Sentence :: ");
 			Sentence = keyboard.next();
 			
-			out.print("Enter Char :: ");
-			Character = keyboard.next();
+			while (1==1) {
+				out.print("Enter Char :: ");
+				String Temp = keyboard.next();
+				if (Temp.length() == 1) {
+					Character = Temp.charAt(0);
+					break;
+				} else {
+					out.println("\ninvalid input!");
+				}
+			}
 			
-			//put in functions	
+			LetterRemover LR = new LetterRemover(Sentence, Character);
+			System.out.println(LR.removeLetters());
+			System.out.println(LR.toString());
 			
 			boolean quit = false;
 			while (1==1) {
 				out.print("Continue using? (y/n) :: ");
-				String answer = keyboard.next().charAt(0);
+				String answer = keyboard.next();
 				
 				if (answer.compareTo((String)"n") == 0) {
 					quit = true;
