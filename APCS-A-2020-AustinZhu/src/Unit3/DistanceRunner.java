@@ -80,24 +80,7 @@ public class DistanceRunner
 			
 			out.print("\n");
 			
-			boolean quit = false;
-			while (1==1) {
-				out.print("Continue using? (y/n) :: ");
-				String answer = keyboard.next();
-				
-				if (answer.compareTo((String)"n") == 0) {
-					quit = true;
-					break;
-				} else if (answer.compareTo((String)"y") == 0) {
-					out.print("\n");
-					break;
-				} else {
-					out.print("invalid input!\n");
-				}
-			}
-			if (quit == true) {
-				break;
-			}
+			
 		}
 	}
 }
