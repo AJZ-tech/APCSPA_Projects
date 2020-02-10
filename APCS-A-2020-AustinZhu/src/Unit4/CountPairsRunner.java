@@ -9,7 +9,7 @@ public class CountPairsRunner
 {
 	public static void main( String[] args )
 	{
-		System.out.println( CountPairs.pairCounter("test_cases") );
+		System.out.println( CountPairs.pairCounter("mississippi") );
 		//add in all of the provided test cases from the lab handout	
 	}
 }
