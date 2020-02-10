@@ -14,9 +14,12 @@ public class LetterRemover
 	{
 		//call set
 	}
-
-	//add in second constructor
 	
+	public LetterRemover(String s, char rem) 
+	{
+		sentence = s;
+		lookFor = rem;
+	}
 	
 	public void setRemover(String s, char rem)
 	{
@@ -26,7 +29,7 @@ public class LetterRemover
 
 	public String removeLetters()
 	{
-		String cleaned=sentence;
+		String cleaned=sentence.replaceAll(String.valueOf(lookFor), "");
 		return cleaned;
 	}
 
