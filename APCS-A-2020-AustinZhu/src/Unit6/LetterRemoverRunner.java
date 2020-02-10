@@ -30,8 +30,9 @@ public class LetterRemoverRunner
 				}
 			}
 			
+			out.println();
 			LetterRemover LR = new LetterRemover(Sentence, Character);
-			System.out.println(LR.removeLetters());
+			System.out.println("Result :: " + LR.removeLetters());
 			System.out.println(LR.toString());
 			
 			boolean quit = false;
