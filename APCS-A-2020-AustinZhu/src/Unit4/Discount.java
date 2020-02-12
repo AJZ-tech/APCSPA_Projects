@@ -18,6 +18,11 @@ public class Discount
 	//			if the bill is >2000, the bill receives a 15% discount
 	public static double getDiscountedBill(double bill)
 	{
-		return 0;
+		double result = bill;
+		
+		if (bill > 2000) {
+			result = bill * 0.85;
+		}
+		return result;
 	}
 }

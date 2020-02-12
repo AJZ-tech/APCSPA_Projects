@@ -9,6 +9,15 @@ public class FirstLastVowel
 {
    public static String go( String a )
 	{
-		return "add code here";
+	   String[] vowels = {"a", "e", "i", "o", "u", "A", "E", "I", "O", "U"};
+	   
+	   for (int i = 0; i < vowels.length; i++) {
+		   if (a.substring(0, 1) == ) {
+			   
+		   } else {
+			   
+		   }
+	   }
+	   return "add code here";
 	}
 }
