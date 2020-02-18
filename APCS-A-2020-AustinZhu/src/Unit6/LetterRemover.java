@@ -30,6 +30,7 @@ public class LetterRemover
 	public String removeLetters()
 	{
 		String cleaned=sentence.replaceAll(String.valueOf(lookFor), "");
+		//replace all is technicly considered a while loop
 		return cleaned;
 	}
 
