@@ -19,11 +19,11 @@ public class Review {
 
 	static {
 		try {
-			Scanner input = new Scanner(new File("cleanSentiment.csv"));
+			Scanner input = new Scanner(new File("src/ConsumerLab/cleanSentiment.csv"));
 			while (input.hasNextLine()) {
 				String[] temp = input.nextLine().split(",");
 				sentiment.put(temp[0], Double.parseDouble(temp[1]));
-				// System.out.println("added "+ temp[0]+", "+temp[1]);
+				//System.out.println("added "+ temp[0]+", "+temp[1]);
 			}
 			input.close();
 		} catch (Exception e) {
@@ -32,10 +32,10 @@ public class Review {
 
 		// read in the positive adjectives in postiveAdjectives.txt
 		try {
-			Scanner input = new Scanner(new File("positiveAdjectives.txt"));
+			Scanner input = new Scanner(new File("src/ConsumerLab/positiveAdjectives.txt"));
 			while (input.hasNextLine()) {
 				String temp = input.nextLine().trim();
-				System.out.println(temp);
+				//System.out.println(temp);
 				posAdjectives.add(temp);
 			}
 			input.close();
@@ -45,7 +45,7 @@ public class Review {
 
 		// read in the negative adjectives in negativeAdjectives.txt
 		try {
-			Scanner input = new Scanner(new File("negativeAdjectives.txt"));
+			Scanner input = new Scanner(new File("src/ConsumerLab/negativeAdjectives.txt"));
 			while (input.hasNextLine()) {
 				negAdjectives.add(input.nextLine().trim());
 			}
@@ -144,18 +144,42 @@ public class Review {
 	public static double totalSentiment(String filename) {
 		// read in the file contents into a string using the textToString method with
 		// the filename
-		textToString(filename);
+		String storageSTR = textToString(filename);
+		//System.out.println(storageSTR);
 		// set up a sentimentTotal variable
 		double sentimentTotal = 0.0;
 		// loop through the file contents
-		for (int i = 0; i < sentiment.size(); i++) {
+		//System.out.println(storageSTR.trim().length());
+		//System.out.println(sentiment.get("abs"));
+		while (storageSTR.trim().length() > -1 ) {
 		// find each word
+			int tempINT = storageSTR.indexOf(SPACE);
+			//System.out.println(tempINT);
+			boolean isThere = false;
 		// add in its sentimentVal
-		// set the file contents to start after this word
-			sentimentTotal += sentimentVal(sentiment.get((double)i));
+			if (storageSTR.indexOf(SPACE) > -1) {
+				for (String i : sentiment.keySet()) {
+					 if(storageSTR.substring(0, tempINT).equals(i)) {
+						isThere = true;
+					}
+				}
+				if (isThere) {
+					sentimentTotal += sentiment.get(storageSTR.substring(0, tempINT));
+					if (sentiment.get(storageSTR.substring(0, tempINT)) < 0)
+					System.out.println(sentiment.get(storageSTR.substring(0, tempINT)));
+					else
+					System.out.println("+" + sentiment.get(storageSTR.substring(0, tempINT)));
+				}
+			// set the file contents to start after this word
+				storageSTR = storageSTR.substring(tempINT, storageSTR.length()).trim();
+				if (isThere) System.out.println(storageSTR);
+			} else {
+				break;
+			}
 		}
 		return sentimentTotal;
 	}
+	
 
 	/**
 	 * Activity 2 starRating method Write the starRating method here which returns
