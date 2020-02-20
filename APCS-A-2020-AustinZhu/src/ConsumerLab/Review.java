@@ -95,13 +95,13 @@ public class Review {
 	 * none
 	 */
 	public static String getPunctuation(String word) {
-		String punc = " ";
+		String punc = "";
 		for (int i = word.length() - 1; i >= 0; i--) {
 			if (!Character.isLetterOrDigit(word.charAt(i))) {
-				punc = punc + word.charAt(i);
+				punc = String.valueOf(word.charAt(i));
 				//System.out.println(punc + " p");
 			} else {
-				return punc + " ";
+				return punc;
 			}
 		}
 		return punc;
@@ -156,28 +156,30 @@ public class Review {
 		while (storageSTR.trim().length() > -1 ) {
 		// find each word
 			int tempINT = storageSTR.indexOf(SPACE);
-			String punct = getPunctuation(storageSTR.substring(0, tempINT));
-			System.out.println(storageSTR.substring(0, tempINT));
+			/*System.out.println(storageSTR.substring(0, tempINT));
 			System.out.println(punct);
-			System.out.println(storageSTR.indexOf(punct));
+			System.out.println(storageSTR.substring(0, tempINT).indexOf(punct));*/
 			//System.out.println ("test");
 			//System.out.println(tempINT);
 			boolean isThere = false;
 		// add in its sentimentVal
 			if (tempINT > -1) {
-				/*if (storageSTR.indexOf(punct) > -1) {
+				String punct = getPunctuation(storageSTR.substring(0, tempINT));
+				if (storageSTR.substring(0, tempINT).indexOf(punct) > 0) {
 					tempINT = storageSTR.indexOf(punct);
-					System.out.println(storageSTR.substring(0, tempINT));
-				}*/
+					//System.out.println(storageSTR.substring(0, tempINT));
+				}
 				//System.out.println(tempINT);
 				for (String i : sentiment.keySet()) {
 					 if(storageSTR.substring(0, tempINT).equals(i)) {
 						isThere = true;
+						System.out.print(storageSTR.substring(0, tempINT));
 						numOfWords++;
 					}
 				}
 				if (isThere) {
 					sentimentTotal += sentiment.get(storageSTR.substring(0, tempINT));
+					System.out.println(": " + sentiment.get(storageSTR.substring(0, tempINT)));
 					/*if (sentiment.get(storageSTR.substring(0, tempINT)) < 0)
 					System.out.println(sentiment.get(storageSTR.substring(0, tempINT)));
 					else
@@ -185,12 +187,12 @@ public class Review {
 				}
 			// set the file contents to start after this word
 				storageSTR = storageSTR.substring(tempINT, storageSTR.length()).trim();
-				//if (isThere) System.out.println(storageSTR);
+				//if (isThere) System.out.println(storageSTR.substring(0, tempINT));
 			} else {
 				break;
 			}
 		}
-		//System.out.println(numOfWords);
+		System.out.println(numOfWords);
 		return sentimentTotal;
 	}
 	
@@ -201,11 +203,21 @@ public class Review {
 	 */
 	public static int starRating(String filename) {
 		// call the totalSentiment method with the fileName
-
+		double ts = totalSentiment(filename);
 		// determine number of stars between 0 and 4 based on totalSentiment value
 		int stars = 0;
 		// write if statements here
-
+		if (ts >= 30.0) {
+			stars = 5;
+		} else if (ts >= 20.0) {
+			stars = 4;
+		} else if (ts >= 10.0) {
+			stars = 3;
+		} else if (ts >= 0.0) {
+			stars = 2;
+		} else {
+			stars = 1;
+		}
 		// return number of stars
 		return stars;
 	}
