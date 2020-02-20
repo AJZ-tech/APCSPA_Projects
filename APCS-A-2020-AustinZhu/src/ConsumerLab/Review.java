@@ -95,12 +95,13 @@ public class Review {
 	 * none
 	 */
 	public static String getPunctuation(String word) {
-		String punc = "";
+		String punc = " ";
 		for (int i = word.length() - 1; i >= 0; i--) {
 			if (!Character.isLetterOrDigit(word.charAt(i))) {
 				punc = punc + word.charAt(i);
+				//System.out.println(punc + " p");
 			} else {
-				return punc;
+				return punc + " ";
 			}
 		}
 		return punc;
@@ -144,39 +145,52 @@ public class Review {
 	public static double totalSentiment(String filename) {
 		// read in the file contents into a string using the textToString method with
 		// the filename
-		String storageSTR = textToString(filename);
+		String storageSTR = textToString(filename) + " t";
 		//System.out.println(storageSTR);
 		// set up a sentimentTotal variable
 		double sentimentTotal = 0.0;
+		int numOfWords = 0;
 		// loop through the file contents
 		//System.out.println(storageSTR.trim().length());
 		//System.out.println(sentiment.get("abs"));
 		while (storageSTR.trim().length() > -1 ) {
 		// find each word
 			int tempINT = storageSTR.indexOf(SPACE);
+			String punct = getPunctuation(storageSTR.substring(0, tempINT));
+			System.out.println(storageSTR.substring(0, tempINT));
+			System.out.println(punct);
+			System.out.println(storageSTR.indexOf(punct));
+			//System.out.println ("test");
 			//System.out.println(tempINT);
 			boolean isThere = false;
 		// add in its sentimentVal
-			if (storageSTR.indexOf(SPACE) > -1) {
+			if (tempINT > -1) {
+				/*if (storageSTR.indexOf(punct) > -1) {
+					tempINT = storageSTR.indexOf(punct);
+					System.out.println(storageSTR.substring(0, tempINT));
+				}*/
+				//System.out.println(tempINT);
 				for (String i : sentiment.keySet()) {
 					 if(storageSTR.substring(0, tempINT).equals(i)) {
 						isThere = true;
+						numOfWords++;
 					}
 				}
 				if (isThere) {
 					sentimentTotal += sentiment.get(storageSTR.substring(0, tempINT));
-					if (sentiment.get(storageSTR.substring(0, tempINT)) < 0)
+					/*if (sentiment.get(storageSTR.substring(0, tempINT)) < 0)
 					System.out.println(sentiment.get(storageSTR.substring(0, tempINT)));
 					else
-					System.out.println("+" + sentiment.get(storageSTR.substring(0, tempINT)));
+					System.out.println("+" + sentiment.get(storageSTR.substring(0, tempINT)));*/
 				}
 			// set the file contents to start after this word
 				storageSTR = storageSTR.substring(tempINT, storageSTR.length()).trim();
-				if (isThere) System.out.println(storageSTR);
+				//if (isThere) System.out.println(storageSTR);
 			} else {
 				break;
 			}
 		}
+		//System.out.println(numOfWords);
 		return sentimentTotal;
 	}
 	

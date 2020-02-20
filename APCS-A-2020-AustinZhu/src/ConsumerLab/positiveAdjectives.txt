@@ -1,3 +1,7 @@
-test1
-test2
-test4
+1960s (0.09)
+above (0.2) 0.29
+abs (0.58) 0.87
+accent (1.73) 2.6
+beepboop (0) 2.6
+abundant (0.83) 3.43
+accessible (1.06) 4.49
