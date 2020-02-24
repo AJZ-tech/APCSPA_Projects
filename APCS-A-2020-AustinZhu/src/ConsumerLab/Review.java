@@ -165,6 +165,9 @@ public class Review {
 		// add in its sentimentVal
 			if (tempINT > -1) {
 				String punct = getPunctuation(storageSTR.substring(0, tempINT));
+				if (punct.compareTo("") != 0) {
+					System.out.println(storageSTR.substring(0, tempINT) + " :: " + punct);
+				}
 				if (storageSTR.substring(0, tempINT).indexOf(punct) > 0) {
 					tempINT = storageSTR.indexOf(punct);
 					//System.out.println(storageSTR.substring(0, tempINT));
