@@ -1,4 +1,4 @@
-package Unit10;
+package ConsumerLab;
 import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
