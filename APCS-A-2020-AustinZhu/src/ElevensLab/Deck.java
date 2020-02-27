@@ -20,9 +20,16 @@ public class Deck {
    //make a Deck constructor
 	public Deck () {
 		cards = new ArrayList<Card>();
+		top = 51;
+		
+		for (int i = 0; i < SUITS.length; i++) {
+			for (int a = 0; a < Card.getFaces().length; a++) {
+				
+			}
+		}
 	}
 	
-	public Deck2 () {
+	public Deck (int T) {
 		
 	}
    	//refer cards to new ArrayList

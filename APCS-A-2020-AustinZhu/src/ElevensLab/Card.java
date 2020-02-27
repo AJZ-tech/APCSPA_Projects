@@ -73,6 +73,10 @@ public class Card
 	public int getPoints() {
 		return PV;
 	}
+	
+	public static String[] getFaces() {
+		return FACES;
+	}
 
   	//toString
 	public String toString() {
