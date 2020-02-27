@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 //make a Deck class
+public class Deck {
 
 	public static final int NUMCARDS = 52;
 	public static String[] SUITS = "CLUBS HEARTS DIAMONDS SPADES".split(" ");
@@ -17,6 +18,13 @@ import java.util.Collections;
 	private int top;
 
    //make a Deck constructor
+	public Deck () {
+		cards = new ArrayList<Card>();
+	}
+	
+	public Deck2 () {
+		
+	}
    	//refer cards to new ArrayList
    	//set top to the top of the deck 51
    	
@@ -30,3 +38,5 @@ import java.util.Collections;
    //write a shuffle() method
    	//use Colletions.shuffle
    	//reset the top card 
+	
+}
