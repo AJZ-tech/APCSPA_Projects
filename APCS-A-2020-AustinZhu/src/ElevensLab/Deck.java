@@ -24,13 +24,9 @@ public class Deck {
 		
 		for (int i = 0; i < SUITS.length; i++) {
 			for (int a = 0; a < Card.getFaces().length; a++) {
-				
+				cards.add(new Card(SUITS[i], a));
 			}
 		}
-	}
-	
-	public Deck (int T) {
-		
 	}
    	//refer cards to new ArrayList
    	//set top to the top of the deck 51

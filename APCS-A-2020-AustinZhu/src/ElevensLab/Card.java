@@ -27,6 +27,7 @@ public class Card
 	public Card(String S, int F) {
 		suit = S;
 		face = F;
+		PV = 0;
 	}
 	
 	public Card (String S, int F, int Points) {
