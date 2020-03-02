@@ -61,7 +61,7 @@ public class Deck {
 		   	//loop through all suits
 			for (int i = 0; i < suits2.length; i++) {
 	   			//add a new card to the deck
-				cards.add(new Card(suits2[i], compare[a], pointValues[a]));
+				cards.add(new Card(suits2[i], compare[a + 1], pointValues[a]));
 			}
 		}
 	}
