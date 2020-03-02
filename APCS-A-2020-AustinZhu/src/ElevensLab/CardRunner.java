@@ -12,8 +12,8 @@ public class CardRunner
 	{
 		//  uncomment once Card is built
 		Card one = new Card("SPADES", 9);
-		out.println(one.getSuit());
-		out.println(one.getFace());
+		out.println(one.suit());
+		out.println(one.rank());
 
 		Card two = new Card("DIAMONDS", 1);
 		out.println(two);

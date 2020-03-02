@@ -35,6 +35,16 @@ public class Card
 		face = F;
 		PV = Points;
 	}
+	
+	public Card (String S, String F, int Points) {
+		suit = S;
+		for (int i = 0; i < Card.FACES.length; i++) {
+			if (F.toLowerCase().equals(Card.FACES[i].toLowerCase())) {
+				face = i;
+			}
+		}
+		PV = Points;
+	}
 
 	// modifiers
 		//set methods
@@ -63,16 +73,16 @@ public class Card
 
   	//accessors
 		//get methods
-	public int getFace() {
+	public String rank() {
+		return FACES[face];
+	}
+	
+	public int face() {
 		return face;
 	}
 	
-	public String getSuit() {
+	public String suit() {
 		return suit;
-	}
-	
-	public int getPoints() {
-		return PV;
 	}
 	
 	public static String[] getFaces() {
@@ -86,5 +96,21 @@ public class Card
 		}
 		return FACES[face] + " of " + suit + " :: " + PV;
 	}
+	
+	public int pointValue() {
+		return PV;
+	}
 
+	public boolean matches(Card card2) {
+		if (PV != 0) {
+			if (face == card2.face() && suit.equals(card2.suit()) && PV == card2.pointValue()) {
+				return true;
+			}
+		} else {
+			if (face == card2.face() && suit.equals(card2.suit())) {
+				return true;
+			}
+		}
+		return false;
+	}
  }
