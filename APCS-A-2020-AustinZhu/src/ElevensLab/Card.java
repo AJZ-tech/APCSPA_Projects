@@ -65,8 +65,9 @@ public class Card
 		face = newFace;
 	}
 	
-	public void changeStats(String newSuit, int newFace, int Points) {
-		changeCard(newSuit, newFace);
+	public void changeCard(String newSuit, int newFace, int Points) {
+		suit = newSuit;
+		face = newFace;
 		setPoints(Points);
 	}
 
