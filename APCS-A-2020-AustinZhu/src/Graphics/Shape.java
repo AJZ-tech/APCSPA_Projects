@@ -75,4 +75,12 @@ public class Shape
    {
    	return xPos+" "+yPos+" "+width+" "+height+" "+color+" "+xSpeed+" "+ySpeed;
    }
+
+	public int getXSpeed() {
+		return xSpeed;
+	}
+
+	public void setXSpeed(int i) {
+		xSpeed = i;
+	}
 }

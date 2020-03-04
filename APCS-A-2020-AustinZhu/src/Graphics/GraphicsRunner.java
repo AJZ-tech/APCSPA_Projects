@@ -22,9 +22,9 @@ public class GraphicsRunner extends JFrame
 
 		setSize(WIDTH,HEIGHT);
 
-		getContentPane().add(new ShapePanel());
+		//getContentPane().add(new ShapePanel());
 
-		//getContentPane().add(new MovingShapePanel());
+		getContentPane().add(new MovingShapePanel());
 
 		setVisible(true);
 
@@ -34,5 +34,7 @@ public class GraphicsRunner extends JFrame
 	public static void main( String args[] )
 	{
 		GraphicsRunner run = new GraphicsRunner();
+		
+		
 	}
 }

@@ -39,10 +39,11 @@ public class ShapePanel extends JPanel
 		window.setColor(Color.BLUE);
 		window.drawRect(20,20,getWidth()-40,getHeight()-40);
 		window.setFont(new Font("TAHOMA",Font.BOLD,18));
-		window.drawString("CREATE YOUR OWN SHAPE!",40,40);
+		window.drawString("Coo coo!",40,40);
 
 
 		//make a Shape
+		window.fillRect(getWidth()/2, getHeight()/2, 20, 40);
 		//draw the Shape
 	}
 }
