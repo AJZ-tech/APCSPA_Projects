@@ -18,4 +18,8 @@ public class ToyStoreRunner
 		System.out.println( sto );	
 		System.out.println( "max == " + sto.getMostFrequentToy() );		
 	}
+	
+	public String myName() {
+		System.out.println("Austin Zhu");
+	}
 }
