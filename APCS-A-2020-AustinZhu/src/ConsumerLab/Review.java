@@ -165,6 +165,12 @@ public class Review {
 		// add in its sentimentVal
 			if (tempINT > -1) {
 				String punct = getPunctuation(storageSTR.substring(0, tempINT));
+<<<<<<< HEAD
+=======
+				/*if (punct.compareTo("") != 0 && punct.compareTo() != ) {
+					System.out.println(storageSTR.substring(0, tempINT) + " :: " + punct);
+				}*/
+>>>>>>> branch 'master' of https://github.com/BraggingBuilder/APCSPA_Projects.git
 				if (storageSTR.substring(0, tempINT).indexOf(punct) > 0) {
 					tempINT = storageSTR.indexOf(punct);
 					//System.out.println(storageSTR.substring(0, tempINT));
@@ -188,6 +194,10 @@ public class Review {
 				}
 			// set the file contents to start after this word
 				storageSTR = storageSTR.substring(tempINT, storageSTR.length()).trim();
+<<<<<<< HEAD
+=======
+				//if (isThere) System.out.println(storageSTR.substring(0, tempINT));
+>>>>>>> branch 'master' of https://github.com/BraggingBuilder/APCSPA_Projects.git
 			} else {
 				break;
 			}
