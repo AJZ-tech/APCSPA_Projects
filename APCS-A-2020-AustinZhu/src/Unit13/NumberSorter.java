@@ -16,12 +16,38 @@ public class NumberSorter
 	private static int getNumDigits(int number)
 	{
 		int count = 0;
+		while(number > 0) {
+			number = (number - (number%10))/10;
+			count += 1;
+		}
 		return count;
 	}
 
 	public static int[] getSortedDigitArray(int number)
 	{
-		int[] sorted = null;
+		int[] sorted = new int[getNumDigits(number)];
+		int count = 1;
+		
+		
+		while (count <= sorted.length) {
+			for (int i = 0; i < count; i++) {
+				if (sorted[i] > number%10) {
+					int[] storage = Arrays.copyOfRange(sorted, i, count);
+					sorted[i] = number%10;
+					int counter = 0;
+					for (int a = i + 1; a < count; a++) {
+						sorted[a] = storage[counter];
+						counter += 1;
+					}
+					break;
+				}
+				if (i == count - 1) {
+					sorted[i] = number%10;
+				}
+			}
+			number = (number - (number%10))/10;
+			count += 1;
+		}
 		return sorted;
 	}
 }
