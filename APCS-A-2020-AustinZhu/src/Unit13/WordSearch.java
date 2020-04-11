@@ -139,7 +139,7 @@ public class WordSearch
 		for (int x = r-1; x >= r-w.length(); x--) {
 			storage = storage + m[x][c];
 		}
-		System.out.println(w + "(up): " + storage + ", " + r + ", " + c);
+		//System.out.println(w + "(up): " + storage + ", " + r + ", " + c);
 		if (w.equals(storage)) {
 			return true;
 		}
